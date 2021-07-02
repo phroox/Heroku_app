@@ -40,6 +40,12 @@ public class MessageBean implements Serializable {
             case "fr":
                 msg = "Bonjour";
                 break;
+            case "it":
+                msg = "Buongiorno, ";
+                break;
+            case "es":
+                msg = "¡buen día!, ";
+                break;    
         }
     }
 }
