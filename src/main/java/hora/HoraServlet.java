@@ -68,7 +68,7 @@ public class HoraServlet extends HttpServlet {
                     msg = "Horário oficial no Brasil: " + hora+ "horas";
                     break;
                 case "en":
-                    msg = "Horário oficial nos Estados Unidos: " + (hora+2)+ "horas";
+                    msg = "Horário oficial nos Estados Unidos: " + (hora-1)+ "horas";
                     break;
                 case "fr":
                     msg = "Horário oficial na França: " + (hora+5)+ "horas";
