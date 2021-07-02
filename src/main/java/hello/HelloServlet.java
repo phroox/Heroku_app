@@ -119,7 +119,7 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
         String msg = "";
         
-        //Recebe hora
+        //Calcula a hora
         
         Calendar cal = Calendar.getInstance();
 	int hora = (cal.get(Calendar.HOUR_OF_DAY)-3);
