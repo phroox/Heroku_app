@@ -57,7 +57,7 @@ public class HoraServlet extends HttpServlet {
         
         Calendar cal = Calendar.getInstance();
 	int hora = (cal.get(Calendar.HOUR_OF_DAY)-3);
-        String msg = "";
+        String msg = "a hora esta aqui" + hora;
         String lang2 = request.getParameter("lang2");
         
             if(lang2==null) {
