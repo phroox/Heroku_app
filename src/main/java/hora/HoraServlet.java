@@ -70,6 +70,9 @@ public class HoraServlet extends HttpServlet {
                 case "en":
                     msg = "Horário oficial nos Estados Unidos: " + (hora-1)+ "horas";
                     break;
+                case "de":
+                    msg = "Horário oficial na Alemanha: " + (hora+5)+ "horas";
+                    break;    
                 case "fr":
                     msg = "Horário oficial na França: " + (hora+5)+ "horas";
                     break;
@@ -92,10 +95,10 @@ public class HoraServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HelloServlet</title>");            
+            out.println("<title>Servlet HoraServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet HelloServlet</h1>");
+            out.println("<h1>Servlet HoraServlet</h1>");
             out.println("<p>" + msg + "</p>");
             out.println("</body>");
             out.println("</html>");
