@@ -94,10 +94,12 @@ public class HoraServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HelloServlet</title>");            
+            out.println("<title>Servlet HoraServlet</title>"); 
+            out.println("<p>APareça algo como a hora</p>"); 
+            out.println("<P>msg aqui = " +msg+ "</p>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet HelloServlet</h1>");
+            out.println("<h1>Servlet HoraServlet</h1>");
             out.println("<p>"+ "" + msg + "</p>");
             out.println("</body>");
             out.println("</html>");
