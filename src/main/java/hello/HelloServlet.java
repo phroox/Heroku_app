@@ -122,7 +122,6 @@ public class HelloServlet extends HttpServlet {
         //Recebe hora
         
         Calendar cal = Calendar.getInstance();
-	System.out.println(cal.getTime());
 	int hora = cal.get(Calendar.HOUR_OF_DAY);
         
         
@@ -193,6 +192,7 @@ public class HelloServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
+            out.println(cal.getTime());
             out.println("<p>" + msg + "</p>");
             out.println("</body>");
             out.println("</html>");
