@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Calendar;
 
 /**
  *
@@ -37,7 +38,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HelloServlet</title>");            
+            out.println("<title> Servlet HelloServlet</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet at " + request.getContextPath() + "</h1>");
@@ -118,29 +119,59 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
         String msg = "";
         
+        //Recebe hora
+        Calendar cal = Calendar.getInstance();
+        int hora = cal.get(Calendar.HOUR_OF_DAY);
+        
         String lang = request.getParameter("lang");
-        if(lang==null)
-            lang = "pt";
-        switch(lang){
-            case "pt":
-                msg = "Alô, ";
-                break;
-            case "en":
-                msg = "Hello, ";
-                break;
-            case "fr":
-                msg = "Bonjour, ";
-                break;
-            case "de":
-                msg = "Hallo, ";
-                break;
-            case "it":
-                msg = "Buongiorno, ";
-                break;
-            case "es":
-                msg = "¡buen día!, ";
-                break;    
+        if(hora < 12 ) {
+            if(lang==null)
+                lang = "pt";
+            switch(lang){
+                case "pt":
+                    msg = "Alô, ";
+                    break;
+                case "en":
+                    msg = "Hello, ";
+                    break;
+                case "fr":
+                    msg = "Bonjour, ";
+                    break;
+                case "de":
+                    msg = "Hallo, ";
+                    break;
+                case "it":
+                    msg = "Buongiorno, ";
+                    break;
+                case "es":
+                    msg = "¡buen día!, ";
+                    break;    
+            }
+        } else {
+           if(lang==null)
+                lang = "pt";
+            switch(lang){
+                case "pt":
+                    msg = "Boa noite, ";
+                    break;
+                case "en":
+                    msg = "bOA NOITE, ";
+                    break;
+                case "fr":
+                    msg = "bon soirré, ";
+                    break;
+                case "de":
+                    msg = "boa noite alemanha, ";
+                    break;
+                case "it":
+                    msg = "boa noite italia, ";
+                    break;
+                case "es":
+                    msg = "¡buenas noches!, ";
+                    break;    
+            }
         }
+        
         
         String nome = request.getParameter("nome");
 
