@@ -58,11 +58,11 @@ public class HoraServlet extends HttpServlet {
         Calendar cal = Calendar.getInstance();
 	int hora = (cal.get(Calendar.HOUR_OF_DAY)-3);
         String msg = "";
-        String lang = request.getParameter("lang");
+        String lang2 = request.getParameter("lang2");
         
-            if(lang==null) {
-                lang = "pt";
-                switch(lang){
+            if(lang2==null) {
+                lang2 = "pt";
+                switch(lang2){
                     case "pt":
                         msg = "O horario no Brasil é:" + hora + "horas";
                         break;
