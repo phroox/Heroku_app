@@ -122,7 +122,8 @@ public class HelloServlet extends HttpServlet {
         //Recebe hora
         
         Calendar cal = Calendar.getInstance();
-	int hora = cal.get(Calendar.HOUR_OF_DAY);
+	int hora = (cal.get(Calendar.HOUR_OF_DAY)-3);
+        
         
         
         String lang = request.getParameter("lang");
