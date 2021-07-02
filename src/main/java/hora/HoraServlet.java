@@ -58,35 +58,35 @@ public class HoraServlet extends HttpServlet {
         Calendar cal = Calendar.getInstance();
 	int hora = (cal.get(Calendar.HOUR_OF_DAY)-3);
         String msg = "a hora esta aqui" + hora;
-        String lang2 = request.getParameter("lang2");
-        
-            if(lang2==null) {
+
+            String lang2 = request.getParameter("lang2");
+
+            if(lang2==null)
                 lang2 = "pt";
-                switch(lang2){
-                    case "pt":
-                        msg = "O horario no Brasil é:" + hora + "horas";
-                        break;
-                    case "en":
-                        hora = hora -1;
-                        msg = "O horario nos EUA é:" + (hora + 1) + "horas";
-                        break;
-                    case "fr":
-                        hora = hora +5;
-                        msg = "O horario na França é:" + hora + "horas";
-                        break;
-                    case "de":
-                        hora = hora +5;
-                        msg = "O horario na Alemanha é:" + hora + "horas";
-                    case "it":
-                        hora = hora +5;
-                        msg = "O horario na Itália é:" + hora + "horas";
-                    case "es":
-                        hora = hora +5;
-                        msg = "O horario na Espanha é:" + hora + "horas";  
-                }
+            switch(lang2){
+                case "pt":
+                    msg = "São, " + hora;
+                    break;
+                case "en":
+                    hora = hora+2;
+                    msg = "São, " + hora;
+                    break;
+                case "fr":
+                    msg = "Bonjour, ";
+                    break;
+                case "it":
+                    msg = "Buongiorno, ";
+                    break;
+                case "es":
+                    msg = "¡buen día!, ";
+                    break;    
             }
 
-          msg = msg + "!";  
+          String nome = request.getParameter("nome");
+
+        
+        
+            msg = msg+"!";
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -94,13 +94,11 @@ public class HoraServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HoraServlet</title>"); 
-            out.println("<p>APareça algo como a hora</p>"); 
-            out.println("<P>msg aqui = " +msg+ "</p>");
+            out.println("<title>Servlet HelloServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet HoraServlet</h1>");
-            out.println("<p>"+ "" + msg + "</p>");
+            out.println("<h1>Servlet HelloServlet</h1>");
+            out.println("<p>" + msg + "</p>");
             out.println("</body>");
             out.println("</html>");
         }
