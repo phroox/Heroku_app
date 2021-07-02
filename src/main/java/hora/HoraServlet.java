@@ -69,7 +69,7 @@ public class HoraServlet extends HttpServlet {
                     break;
                 case "en":
                     hora = hora+2;
-                    msg = "São, " + hora;
+                    msg = "enn São, " + (hora+2);
                     break;
                 case "fr":
                     msg = "Bonjour, ";
@@ -82,7 +82,6 @@ public class HoraServlet extends HttpServlet {
                     break;    
             }
 
-          String nome = request.getParameter("nome");
 
         
         
