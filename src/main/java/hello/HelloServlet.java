@@ -132,16 +132,16 @@ public class HelloServlet extends HttpServlet {
                 lang = "pt";
             switch(lang){
                 case "pt":
-                    msg = "Alô, ";
+                    msg = "Bom dia, ";
                     break;
                 case "en":
-                    msg = "Hello, ";
+                    msg = "Good Morning, ";
                     break;
                 case "fr":
                     msg = "Bonjour, ";
                     break;
                 case "de":
-                    msg = "Hallo, ";
+                    msg = "Guten Morgen, ";
                     break;
                 case "it":
                     msg = "Buongiorno, ";
@@ -150,27 +150,50 @@ public class HelloServlet extends HttpServlet {
                     msg = "¡buen día!, ";
                     break;    
             }
-        } else {
+        } else if(hora < 18 ) {
            if(lang==null)
+                lang = "pt";
+            switch(lang){
+                case "pt":
+                    msg = "Boa tarde, ";
+                    break;
+                case "en":
+                    msg = "Good afternoon, ";
+                    break;
+                case "fr":
+                    msg = "Bon après-midi, ";
+                    break;
+                case "de":
+                    msg = "Guten Abend, ";
+                    break;
+                case "it":
+                    msg = "Buona serata, ";
+                    break;
+                case "es":
+                    msg = "buenas tardes, ";
+                    break;    
+            }
+        } else {
+            if(lang==null)
                 lang = "pt";
             switch(lang){
                 case "pt":
                     msg = "Boa noite, ";
                     break;
                 case "en":
-                    msg = "bOA NOITE, ";
+                    msg = "Good night, ";
                     break;
                 case "fr":
-                    msg = "bon soirré, ";
+                    msg = "bonne nuit, ";
                     break;
                 case "de":
-                    msg = "boa noite alemanha, ";
+                    msg = "Gute Nacht, ";
                     break;
                 case "it":
-                    msg = "boa noite italia, ";
+                    msg = "Buona Notte, ";
                     break;
                 case "es":
-                    msg = "¡buenas noches!, ";
+                    msg = "buenas tardes, ";
                     break;    
             }
         }
