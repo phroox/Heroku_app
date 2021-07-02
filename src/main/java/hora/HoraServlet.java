@@ -65,20 +65,19 @@ public class HoraServlet extends HttpServlet {
                 lang2 = "pt";
             switch(lang2){
                 case "pt":
-                    msg = "São, " + hora;
+                    msg = "Horário oficial no Brasil: " + hora+ "horas";
                     break;
                 case "en":
-                    hora = hora+2;
-                    msg = "enn São, " + (hora+2);
+                    msg = "Horário oficial nos Estados Unidos: " + (hora+2)+ "horas";
                     break;
                 case "fr":
-                    msg = "Bonjour, ";
+                    msg = "Horário oficial na França: " + (hora+5)+ "horas";
                     break;
                 case "it":
-                    msg = "Buongiorno, ";
+                    msg = "Horário oficial na Itália: " + (hora+5)+ "horas";
                     break;
                 case "es":
-                    msg = "¡buen día!, ";
+                    msg = "Horário oficial na Espanha: " + (hora+5)+ "horas";
                     break;    
             }
 
