@@ -68,7 +68,7 @@ public class HoraServlet extends HttpServlet {
                         break;
                     case "en":
                         hora = hora -1;
-                        msg = "O horario nos EUA é:" + hora + "horas";
+                        msg = "O horario nos EUA é:" + (hora + 1) + "horas";
                         break;
                     case "fr":
                         hora = hora +5;
@@ -86,7 +86,7 @@ public class HoraServlet extends HttpServlet {
                 }
             }
 
-            
+          msg = msg + "!";  
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
